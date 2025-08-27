@@ -20,7 +20,7 @@ function CarCard() {
         window.open(url, "_blank"); // opens in new tab
     };
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen gap-8 px-4">
+        <div className="flex flex-col justify-center mt-8 items-center min-h-screen gap-8 px-4">
             {/* Section Heading */}
             <div className="text-center max-w-2xl">
                 <h2 className="text-3xl font-bold text-gray-900">

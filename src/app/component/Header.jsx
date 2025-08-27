@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-            <div className="container mx-auto px-4 lg:px-8">
+            <div className="container mx-auto px-4 lg:px-20">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                         <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded-lg flex items-center justify-center">

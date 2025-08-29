@@ -36,10 +36,12 @@ const Header = () => {
                     </nav>
 
                     <div className="hidden md:flex items-center space-x-4">
-                        <Button variant="ghost" className="hover:bg-yellow-500 hover:text-white" size="lg">
+                        <Link href="/Login">                        <Button variant="ghost" className="hover:bg-yellow-500 hover:text-white" size="lg">
                             <User className="h-4 w-4 mr-2 " />
                             Login
                         </Button>
+                        </Link>
+
                         <Button variant="default" size="lg" className="bg-blue-900 text-white ">
                             Sign Up
                         </Button>

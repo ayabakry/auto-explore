@@ -16,13 +16,13 @@ function Footer() {
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 ">
                         <li>
-                            <Link href="#" className="me-4 md:me-6">About</Link>
+                            <Link href="/about" className="me-4 md:me-6">About</Link>
                         </li>
                         <li>
-                            <Link href="#" className="me-4 md:me-6">Contact</Link>
+                            <Link href="/contact-us" className="me-4 md:me-6">Contact</Link>
                         </li>
                         <li>
-                            <Link href="#" className="me-4 md:me-6">Privacy Policy</Link>
+                            <Link href="/policy" className="me-4 md:me-6">Privacy Policy</Link>
                         </li>
 
                     </ul>

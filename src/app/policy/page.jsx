@@ -112,10 +112,10 @@ export default function policy() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Rental Policies & Terms
+              Auto-Explore Policies & Terms
             </h1>
             <p className="text-xl text-blue-100">
-              Everything you need to know about renting with DriveEasy
+              Everything you need to know about renting with Auto-Explore
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function policy() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Rental Requirements & Policies
+                Auto-Explore Requirements & Policies
               </h2>
               <p className="text-lg text-gray-600">
                 Please review these important policies before making your
@@ -244,72 +244,9 @@ export default function policy() {
         </div>
       </section>
 
-      {/* Additional Information */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Additional Information
-            </h2>
+   
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <FileText className="w-6 h-6 text-blue-900 mr-2" />
-                  Documentation Required
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Valid driver's license</li>
-                  <li>• Major credit card in driver's name</li>
-                  <li>• Government-issued photo ID</li>
-                  <li>• Proof of insurance (if using own coverage)</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Clock className="w-6 h-6 text-blue-900 mr-2" />
-                  Operating Hours
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Monday - Friday: 8:00 AM - 8:00 PM</li>
-                  <li>• Saturday: 8:00 AM - 6:00 PM</li>
-                  <li>• Sunday: 10:00 AM - 6:00 PM</li>
-                  <li>• After-hours pickup/return available</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8 bg-blue-50 rounded-xl p-6 border-l-4 border-blue-900">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Questions About Our Policies?
-              </h3>
-              <p className="text-gray-600 mb-4">
-                If you have any questions about our rental policies or need
-                clarification on any terms, our customer service team is here to
-                help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-300">
-                  Contact Support
-                </button>
-                <button className="border border-blue-900 text-blue-900 px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                  View FAQ
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer Note */}
-      <section className="py-8 bg-gray-900 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-300">
-            These policies are subject to change. Last updated: September 2025
-          </p>
-        </div>
-      </section>
+      
     </div>
   );
 }

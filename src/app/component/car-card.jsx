@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from "next/image";
 import { Car, Users, Fuel, Settings, MessageCircle } from "lucide-react";
 import autoo from "../Imgs/auto.png"; // Import your car image
+import { Button } from '@/components/ui/button';
 
 function CarCard() {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -128,7 +129,6 @@ function CarCard() {
             {/* Car Card */}
             {currentCar ? (
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden border border-gray-200 w-full max-w-sm">
-                    {/* Image with Badges */}
                     <div className="relative overflow-hidden h-48">
                         <Image
                             src={currentCar.image}
@@ -153,7 +153,6 @@ function CarCard() {
                         </div>
                     </div>
 
-                    {/* Content */}
                     <div className="p-6">
                         <h3 className="text-xl font-semibold text-gray-900 mb-2">{currentCar.name}</h3>
 
@@ -163,7 +162,6 @@ function CarCard() {
                             </div>
                         </div>
 
-                        {/* Features */}
                         <div className="grid grid-cols-3 gap-4 mb-6 text-sm text-gray-600">
                             <div className="flex items-center gap-1">
                                 <Users className="h-4 w-4" />
@@ -179,21 +177,19 @@ function CarCard() {
                             </div>
                         </div>
 
-                        {/* Actions */}
-                        <div className="flex gap-2">
-                            <button 
-                                className="flex-1 bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200 flex items-center justify-center gap-2"
-                                onClick={() => handleViewDetails(currentCar.id)}
-                            >
-                                <Car className="h-4 w-4" /> View Details
-                            </button>
-                            <button
-                                onClick={() => handleWhatsApp(currentCar.name)}
-                                className="shrink-0 bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition-colors duration-200"
-                            >
-                                <MessageCircle className="h-4 w-4" />
-                            </button>
-                        </div>
+                       <div className="flex gap-2">
+                        <Button className="flex-1 bg-blue-900" onClick={() => handleViewDetails("car-1")}>
+                            <Car className="h-4 w-4 mr-2" /> View Details
+                        </Button>
+                        <Button
+                            size="icon"
+                            onClick={() => handleWhatsApp("Mercedes-Benz E-Class")}
+                            className="shrink-0 bg-green-500"
+                        >
+                            <MessageCircle className="h-4 w-4" />
+                        </Button>
+
+                    </div>
                     </div>
                 </div>
             ) : (
@@ -204,7 +200,6 @@ function CarCard() {
                 </div>
             )}
 
-            {/* Navigation for filtered results */}
             {filteredCars.length > 1 && (
                 <div className="flex gap-2">
                     {filteredCars.map((car, index) => (
@@ -218,7 +213,6 @@ function CarCard() {
                 </div>
             )}
 
-            {/* View All Cars Button */}
             <button className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200">
                 View All Cars
             </button>

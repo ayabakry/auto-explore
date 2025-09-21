@@ -40,7 +40,7 @@ const Header = () => {
               Contact
             </Link>
             <Link
-              href="/"
+              href="/policy"
               className="text-muted-foreground hover:text-blue-900 transition-colors"
             >
               Privacy Policy

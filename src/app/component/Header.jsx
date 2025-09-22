@@ -106,10 +106,12 @@ const Header = () => {
                 Privacy Policy
               </Link>
               <div className="pt-4 space-y-2 border-t border-border">
-                <Button variant="ghost" size="sm">
-                  <User className="h-4 w-4 mr-2" />
-                  Login
-                </Button>
+                <Link href="/Login">
+                  <Button variant="ghost" size="sm">
+                    <User className="h-4 w-4 mr-2" />
+                    Login
+                  </Button>
+                </Link>
                 {/* <Button
                   variant="default"
                   size="sm"

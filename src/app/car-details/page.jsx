@@ -238,45 +238,78 @@ export default function CarDetailsPage() {
 
         {/* Detailed Information Tabs */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="grid md:grid-cols-3 gap-8 p-8">
+          <div className="p-8">
             {/* Features */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-blue-900" />
                 Features
               </h3>
-              <div className="space-y-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {car.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    <span className="text-gray-700">{feature}</span>
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 bg-gray-50 rounded-lg p-3"
+                  >
+                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Specifications */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <div className="border-t pt-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
                 <Settings className="h-5 w-5 text-blue-900" />
                 Specifications
               </h3>
-              <div className="space-y-3">
-                {Object.entries(car.specifications).map(([key, value]) => (
-                  <div key={key} className="flex justify-between">
-                    <span className="text-gray-600">{key}:</span>
-                    <span className="font-medium text-gray-900">{value}</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  {Object.entries(car.specifications)
+                    .slice(
+                      0,
+                      Math.ceil(Object.entries(car.specifications).length / 2)
+                    )
+                    .map(([key, value]) => (
+                      <div
+                        key={key}
+                        className="flex justify-between items-center py-2 border-b border-gray-100"
+                      >
+                        <span className="text-gray-600 font-medium">{key}</span>
+                        <span className="font-semibold text-gray-900">
+                          {value}
+                        </span>
+                      </div>
+                    ))}
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Year</span>
+                    <span className="font-semibold text-gray-900">
+                      {car.year}
+                    </span>
                   </div>
-                ))}
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Year:</span>
-                  <span className="font-medium text-gray-900">{car.year}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Mileage:</span>
-                  <span className="font-medium text-gray-900">
-                    {car.mileage}
-                  </span>
+                <div className="space-y-4">
+                  {Object.entries(car.specifications)
+                    .slice(
+                      Math.ceil(Object.entries(car.specifications).length / 2)
+                    )
+                    .map(([key, value]) => (
+                      <div
+                        key={key}
+                        className="flex justify-between items-center py-2 border-b border-gray-100"
+                      >
+                        <span className="text-gray-600 font-medium">{key}</span>
+                        <span className="font-semibold text-gray-900">
+                          {value}
+                        </span>
+                      </div>
+                    ))}
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Mileage</span>
+                    <span className="font-semibold text-gray-900">
+                      {car.mileage}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

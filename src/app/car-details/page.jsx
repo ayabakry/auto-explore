@@ -93,18 +93,6 @@ export default function CarDetailsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 text-blue-900 hover:text-blue-700 transition-colors">
-              <ArrowLeft className="h-5 w-5" />
-              <span className="font-medium">Back to Fleet</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
       <div className="container mx-auto px-6 py-8">
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Image Gallery */}

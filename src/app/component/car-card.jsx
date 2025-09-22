@@ -6,10 +6,12 @@ import { Car, Users, Fuel, Settings, MessageCircle } from "lucide-react";
 import autoo from "../Imgs/auto.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function CarCard() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState(0);
+  const router = useRouter();
 
   // Sample car data - using your imported image
   const cars = [
@@ -73,6 +75,7 @@ function CarCard() {
   const categories = ["All", "Sedan", "SUV", "Hatchback"];
 
   const handleViewDetails = (id) => {
+    router.push(`/car-details`);
     console.log("View details for car:", id);
   };
 
@@ -180,11 +183,12 @@ function CarCard() {
             </div>
 
             <div className="flex gap-2">
-              <Link href="/car-details">
-                <Button className="flex-1 bg-blue-900">
-                  <Car className="h-4 w-4 mr-2" /> View Details
-                </Button>
-              </Link>
+              <Button
+                className="flex-1 bg-blue-900"
+                onClick={() => handleViewDetails(currentCar)}
+              >
+                <Car className="h-4 w-4 mr-2" /> View Details
+              </Button>
               <Button
                 size="icon"
                 onClick={() => handleWhatsApp("Mercedes-Benz E-Class")}

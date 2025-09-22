@@ -110,13 +110,13 @@ const Header = () => {
                   <User className="h-4 w-4 mr-2" />
                   Login
                 </Button>
-                <Button
+                {/* <Button
                   variant="default"
                   size="sm"
                   className="bg-blue-900 text-white "
                 >
                   Sign Up
-                </Button>
+                </Button> */}
               </div>
             </nav>
           </div>

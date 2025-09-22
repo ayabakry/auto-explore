@@ -92,14 +92,14 @@ const Header = () => {
                 About
               </Link>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
               <Link
-                href="/"
+                href="/policy"
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
